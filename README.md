@@ -39,11 +39,3 @@
 - [Speeding up e-mails and ditching the MX server](https://adam.kostarelas.com/blog/mx-server-to-gmail-email-forwarder/)
 - [Noodle Mix 1: Chapagetti and Shin Ramyun](https://adam.kostarelas.com/blog/noodle-mix-chapagetti-shin-ramyun/)
 <!-- BLOG-POST-LIST:END -->
-
-<style type='text/css'>
-a{ text-decoration:none;color:#89dd99!important;}
-a:hover{text-decoration:underline;color:#ece48b!important;}
-i{color:#89dd99;}
-.fancy{color:#9013fe;}
-.Box-body{background-color:#232327;color:#f5f5f5;}
-</style>
