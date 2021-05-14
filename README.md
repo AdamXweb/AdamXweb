@@ -1,4 +1,5 @@
-<h1 align="center"><code>👋 Hello! I'm Adam</code>.</h2>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+<h1 align="center"><code>👋 Hello! I'm Adam</code><span class="fancy">.</span></h2>
 <p align="center">
     <a href="https://adam.kostarelas.com">Blog</a>
     <a href="https://twitter.com/adamxweb">Twitter</a>
@@ -11,25 +12,33 @@
 
 **Languages and Tools:**
 <p align="left">
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/apple/apple-original.svg" alt="apple" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/firefox/firefox-plain.svg" alt="firefox" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/github/github-original.svg" alt="github" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/git/git-original.svg" alt="git" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/bash/bash-original.svg" alt="bash" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/python/python-original.svg" alt="python" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/html5/html5-original.svg" alt="html5" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/sass/sass-original.svg" alt="sass" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/bootstrap/bootstrap-plain.svg" alt="bootstrap" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/go/go-original.svg" alt="go" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/php/php-plain.svg" alt="php" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/photoshop/photoshop-plain.svg" alt="photoshop" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="20" height="20"/>
+    <i class="devicon-apple-original"></i>
+    <i class="devicon-firefox-plain"></i>
+    <i class="devicon-github-original"></i>
+    <i class="devicon-git-plain"></i>
+    <i class="devicon-bash-plain"></i>
+    <i class="devicon-jupyter-plain-wordmark"></i>
+    <i class="devicon-python-plain"></i>
+    <i class="devicon-mysql-plain-wordmark"></i>
+    <i class="devicon-html5-plain"></i>
+    <i class="devicon-sass-original"></i>
+    <i class="devicon-bootstrap-plain"></i>
+    <i class="devicon-go-plain"></i>
+    <i class="devicon-dot-net-plain-wordmark"></i>
+    <i class="devicon-php-plain"></i>
+    <i class="devicon-javascript-plain"></i>
+    <i class="devicon-photoshop-plain"></i>
+    <i class="devicon-amazonwebservices-original-wordmark"></i>
 </p>
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
+
+<style type='text/css'>
+a{ text-decoration:none;color:#89dd99!important;}
+a:hover{text-decoration:underline;color:#ece48b!important;}
+i{color:#89dd99;}
+.fancy{color:#9013fe;}
+.Box-body{background-color:#232327;color:#f5f5f5;}
+</style>
