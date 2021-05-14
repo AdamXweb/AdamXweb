@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+<link rel="stylesheet" href="https://raw.githubusercontent.com/AdamXweb/AdamXweb/main/style.css">
 <h1 align="center"><code>👋 Hello! I'm Adam</code><span class="fancy">.</span></h2>
 <p align="center">
     <a href="https://adam.kostarelas.com">Blog</a>

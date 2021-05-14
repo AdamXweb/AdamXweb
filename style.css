@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    color: #89dd99 !important;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ece48b !important;
+}
+
+i {
+    color: #89dd99;
+}
+
+.fancy {
+    color: #9013fe;
+}
+
+.Box-body {
+    background-color: #232327;
+    color: #f5f5f5;
+}
