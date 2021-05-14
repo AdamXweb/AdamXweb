@@ -32,4 +32,9 @@
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [Turnip rice cake (腊味萝卜糕)](https://adam.kostarelas.com/blog/turnip-rice-cake/)
+- [NGV Trennial Visit 2021](https://adam.kostarelas.com/blog/ngv-trennial-2021-visit/)
+- [Easy Mac Quality of Life Improvements with Apps](https://adam.kostarelas.com/blog/easy-mac-quality-of-life-improvements/)
+- [Speeding up e-mails and ditching the MX server](https://adam.kostarelas.com/blog/mx-server-to-gmail-email-forwarder/)
+- [Noodle Mix 1: Chapagetti and Shin Ramyun](https://adam.kostarelas.com/blog/noodle-mix-chapagetti-shin-ramyun/)
 <!-- BLOG-POST-LIST:END -->
