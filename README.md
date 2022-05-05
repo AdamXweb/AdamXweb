@@ -32,9 +32,9 @@
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [Moving from NBN to 5G](https://adam.kostarelas.com/blog/from-nbn-to-5g/)
 - [Journey into making Album Art covers](https://adam.kostarelas.com/blog/album-art/)
 - [Mac privacy feature you may not have heard of](https://adam.kostarelas.com/blog/mac-privacy-feature/)
 - [Turnip rice cake &lpar;腊味萝卜糕&rpar;](https://adam.kostarelas.com/blog/turnip-rice-cake/)
 - [NGV Trennial Visit 2021](https://adam.kostarelas.com/blog/ngv-trennial-2021-visit/)
-- [Easy Mac Quality of Life Improvements with Apps](https://adam.kostarelas.com/blog/easy-mac-quality-of-life-improvements/)
 <!-- BLOG-POST-LIST:END -->
