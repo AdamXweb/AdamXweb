@@ -1,19 +1,15 @@
 <h1 align="center"><code>👋 Hello! I'm Adam</code>.</h2>
-<p align="center">
-    <a href="https://adam.kostarelas.com">Blog</a>
-    <a href="https://twitter.com/adamxweb">Twitter</a>
-</p>
 
-- 🔭 I’m currently working on [PricePossum](https://pricepossum.com)
-- 💬 Ask me about **CSS, Hugo & Product development**
+- 🔭 I’m currently working on [PrivacyKey](https://privacykey.org)
+- 💬 Ask me about **Hugo & Product development**
 - 📫 You can reach me on twitter [@AdamXweb](https://twitter.com/adamxweb)
-- 🔑  GPG key: [`B74228FF5EF4F8CB`](https://github.com/adamxweb.gpg)
+- ✍🏻 I try to document stuff on my [blog](https://adam.kostarelas.com/blog)
+- 🔑 GPG key: [`B74228FF5EF4F8CB`](https://github.com/adamxweb.gpg)
 
 **Languages and Tools:**
 <p align="left">
 <img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/apple/apple-original.svg" alt="apple" width="20" height="20"/>
 <img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/firefox/firefox-plain.svg" alt="firefox" width="20" height="20"/>
-<img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/github/github-original.svg" alt="github" width="20" height="20"/>
 <img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/git/git-original.svg" alt="git" width="20" height="20"/>
 <img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/bash/bash-original.svg" alt="bash" width="20" height="20"/>
 <img src="https://raw.githubusercontent.com/adamxweb/devicon/master/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter" width="20" height="20"/>
