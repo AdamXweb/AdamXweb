@@ -353,7 +353,7 @@ jobs:
           base: ""
           token: ${{ secrets.GITHUB_TOKEN }}
           plugin_stackoverflow: yes
-          plugin_stackoverflow_user: 979052
+          plugin_stackoverflow_user: 10079952
           plugin_stackoverflow_sections: answers-top
           plugin_stackoverflow_limit: 5
 
@@ -374,7 +374,7 @@ jobs:
           plugin_tweets: yes
           plugin_tweets_token: ${{ secrets.TWITTER_TOKEN }}
           plugin_tweets_attachments: yes
-          plugin_tweets_user: Lissy_Sykes
+          plugin_tweets_user: adamxweb
           plugin_tweets_limit: 5
 
   # RSS Feed
@@ -392,28 +392,9 @@ jobs:
           base: ""
           token: ${{ secrets.GITHUB_TOKEN }}
           plugin_rss: yes
-          plugin_rss_source: https://notes.aliciasykes.com/feed
+          plugin_rss_source: https://adam.kostarelas.com/index.xml
           plugin_rss_limit: 8
 
-  # Wakatime Metrics
-  wakatime-metrics:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          filename: assets/metrics/wakatime.svg
-          committer_message: "📊 Updates metrics - wakatime"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          user: adamxweb
-          base: ""
-          token: ${{ secrets.GITHUB_TOKEN }}
-          plugin_wakatime: yes
-          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
-          plugin_wakatime_user: liss
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-          
   # All Metrics together
   all-metrics:
     runs-on: ubuntu-latest
