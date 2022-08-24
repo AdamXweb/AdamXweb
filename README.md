@@ -4,18 +4,14 @@
 <p align="center">
    <kbd>
   <a href="https://twitter.com/adamxweb"><img src="https://img.shields.io/badge/-@AdamXweb-00acee?style=flat&logo=Twitter&logoColor=white" /></a>
-  <a href="https://apple.stackexchange.com/users/297607/adamxweb"><img src="https://img.shields.io/badge/-adamxweb-f48225?style=flat&logo=Stackoverflow&logoColor=white" /></a>
-  <a href="https://github.com/AdamXweb"><img src="https://img.shields.io/badge/-AdamXweb-3a3a3a?style=flat&logo=GitHub&logoColor=white" /></a>
-  <a href="https://adam.kostarelas.com"><img src="https://img.shields.io/badge/-adam.kostarelas.com-FF4088?style=flat&logo=hugo&logoColor=white" /></a>
-  <a href="https://keybase.io/adamxweb"><img src="https://img.shields.io/badge/-adamxweb-5e78ef?style=flat&logo=keybase&logoColor=white" /></a>
-  <a href="https://www.reddit.com/user/adamxweb"><img src="https://img.shields.io/badge/-adamxweb-ff4500?style=flat&logo=reddit&logoColor=white" /></a>
+  <a href="https://adam.kostarelas.com"><img src="https://img.shields.io/badge/-adam.kostarelas.com-000000?style=flat&logo=About.me&logoColor=white" /></a>
   <a href="https://www.linkedin.com/in/adamkostarelas"><img src="https://img.shields.io/badge/-Adam Kostarelas-0072b1?style=flat&logo=Linkedin&logoColor=white" /></a>
+  <a href="https://matrix.to/#/@adamxweb:matrix.org"><img src="https://img.shields.io/badge/-adamxweb-000000?style=flat&logo=Matrix&logoColor=white" /></a>
   </kbd>
 </p>
 
 - 🔭 I’m currently working on [PrivacyKey](https://privacykey.org)
 - 💬 Ask me about **Hugo & Product development**
-- 📫 You can reach me on twitter [@AdamXweb](https://twitter.com/adamxweb) or on Matrix [@adamxweb:matrix.org](https://matrix.to/#/@adamxweb:matrix.org)
 - ✍🏻 I try to document stuff on my [blog](https://adam.kostarelas.com/blog)
 - 🔑 GPG key: [`B74228FF5EF4F8CB`](https://github.com/adamxweb.gpg)
 
