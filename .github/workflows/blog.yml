@@ -3,11 +3,11 @@ name: Blog in Readme
 on:
   workflow_dispatch:
   schedule:
-    # every day bright and early
-    - cron: 0 7 * * *
+    # Once a week
+    - cron: 0 7 * * 1
 
 jobs:
-  update:
+  updateposts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
