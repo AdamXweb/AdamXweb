@@ -18,11 +18,11 @@
 
 ## 📰 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
+- [Quad single IP addresses](https://adam.kostarelas.com/blog/quad-single-ip-addresses/)
 - [Arc Browser, how private is it?](https://adam.kostarelas.com/blog/arc-browser-privacy-check/)
 - [Ambient sound series](https://adam.kostarelas.com/blog/ambient/)
 - [Awesome Aussie, an awesome list automated with Airtable](https://adam.kostarelas.com/blog/awesome-aussie/)
 - [HuTasker, Hugo X Airtable](https://adam.kostarelas.com/blog/hutasker-hugo-x-airtable/)
-- [Moving from NBN to 5G](https://adam.kostarelas.com/blog/from-nbn-to-5g/)
 <!-- BLOG-POST-LIST:END -->
 
 <details>
