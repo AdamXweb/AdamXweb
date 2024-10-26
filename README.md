@@ -13,7 +13,7 @@
 - 🔭 I’m currently working on [PrivacyKey](https://privacykey.org)
 - 💬 Ask me about **Hugo & Product development**
 - ✍🏻 I try to document stuff on my [blog](https://adam.kostarelas.com/blog)
-- 🔑 GPG key: [`7C91B0B994EEF1E4`](https://github.com/adamxweb.gpg)
+- 🔑 GPG key: [`78021768CFE22200`](https://github.com/adamxweb.gpg)
 
 
 ## 📰 Latest Blog Posts
