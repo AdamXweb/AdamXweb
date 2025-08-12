@@ -3,15 +3,13 @@
 
 <p align="center">
    <kbd>
-  <a href="https://twitter.com/adamxweb"><img src="https://img.shields.io/badge/-@AdamXweb-00acee?style=flat&logo=Twitter&logoColor=white" /></a>
   <a href="https://adam.kostarelas.com"><img src="https://img.shields.io/badge/-adam.kostarelas.com-000000?style=flat&logo=About.me&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/adamkostarelas"><img src="https://img.shields.io/badge/-Adam Kostarelas-0072b1?style=flat&logo=Linkedin&logoColor=white" /></a>
-  <a href="https://matrix.to/#/@adamxweb:matrix.org"><img src="https://img.shields.io/badge/-adamxweb-000000?style=flat&logo=Matrix&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/adamkostarelas"><img src="https://img.shields.io/badge/-Adam Kostarelas-0072b1?style=flat&logo=LinkedIn&logoColor=white"/></a>
+  <a href="https://aus.social/@adamxweb"><img src="https://img.shields.io/badge/-adamxweb-000000?style=flat&logo=Mastodon&logoColor=white" /></a>
   </kbd>
 </p>
 
-- 🔭 I’m currently working on [PrivacyKey](https://privacykey.org)
-- 💬 Ask me about **Hugo & Product development**
+- 💬 Ask me about **Web browsers & cyber improvements for NFPs**
 - ✍🏻 I try to document stuff on my [blog](https://adam.kostarelas.com/blog)
 - 🔑 GPG key: [`78021768CFE22200`](https://github.com/adamxweb.gpg)
 
