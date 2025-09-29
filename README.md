@@ -16,11 +16,11 @@
 
 ## 📰 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
+- [Okay Buddy skateboarding dog CTF writeup](https://adam.kostarelas.com/blog/okay-buddy-2025/)
+- [Githubs reputation being exploited by bad actors to distribute malware](https://adam.kostarelas.com/blog/github-macos-malware/)
 - [Quad single IP addresses](https://adam.kostarelas.com/blog/quad-single-ip-addresses/)
 - [Arc Browser, how private is it?](https://adam.kostarelas.com/blog/arc-browser-privacy-check/)
 - [Ambient sound series](https://adam.kostarelas.com/blog/ambient/)
-- [Awesome Aussie, an awesome list automated with Airtable](https://adam.kostarelas.com/blog/awesome-aussie/)
-- [HuTasker, Hugo X Airtable](https://adam.kostarelas.com/blog/hutasker-hugo-x-airtable/)
 <!-- BLOG-POST-LIST:END -->
 
 <details>
