@@ -16,11 +16,11 @@
 
 ## 📰 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
+- [Binary alphabet](https://adam.kostarelas.com/resource/binary-alphabet/)
+- [My first trip to BSides Canberra](https://adam.kostarelas.com/blog/bsides-canberra-2025/)
 - [Okay Buddy skateboarding dog CTF writeup](https://adam.kostarelas.com/blog/okay-buddy-2025/)
 - [Githubs reputation being exploited by bad actors to distribute malware](https://adam.kostarelas.com/blog/github-macos-malware/)
 - [Quad single IP addresses](https://adam.kostarelas.com/blog/quad-single-ip-addresses/)
-- [Arc Browser, how private is it?](https://adam.kostarelas.com/blog/arc-browser-privacy-check/)
-- [Ambient sound series](https://adam.kostarelas.com/blog/ambient/)
 <!-- BLOG-POST-LIST:END -->
 
 <details>
