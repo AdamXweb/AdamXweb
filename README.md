@@ -16,11 +16,11 @@
 
 ## 📰 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
+- [Installing MacOS Mavericks 10.9 in a VM on UTM](https://adam.kostarelas.com/blog/mavericks-in-utm-on-silicon/)
 - [Rooting the Bigme B7](https://adam.kostarelas.com/blog/rooting-bigme-b7/)
 - [Binary alphabet](https://adam.kostarelas.com/resource/binary-alphabet/)
 - [My first trip to BSides Canberra](https://adam.kostarelas.com/blog/bsides-canberra-2025/)
 - [Okay Buddy skateboarding dog CTF writeup](https://adam.kostarelas.com/blog/okay-buddy-2025/)
-- [Githubs reputation being exploited by bad actors to distribute malware](https://adam.kostarelas.com/blog/github-macos-malware/)
 <!-- BLOG-POST-LIST:END -->
 
 <details>
