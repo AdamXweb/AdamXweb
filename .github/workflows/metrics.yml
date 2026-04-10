@@ -176,8 +176,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/languages.svg
-          committer_message: "📊 Updates metrics - languages"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_languages: yes
