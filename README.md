@@ -16,11 +16,11 @@
 
 ## 📰 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
+- [Banana Blitz](https://adam.kostarelas.com/micro/banana-blitz/)
 - [The CyberThing Trustmark - a Saturday Arvo project](https://adam.kostarelas.com/blog/cyberthing-trustmark/)
 - [Waves](https://adam.kostarelas.com/micro/waves/)
 - [Mini Music Player](https://adam.kostarelas.com/micro/mini-music-player/)
 - [Lego Mac Mini Case](https://adam.kostarelas.com/micro/lego-mac-case/)
-- [My search for the perfect MacOS Launcher - Putting three in the Spotlight](https://adam.kostarelas.com/blog/search-for-perfect-macos-launcher/)
 <!-- BLOG-POST-LIST:END -->
 
 <details>
