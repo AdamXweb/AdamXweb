@@ -16,11 +16,11 @@
 
 ## 📰 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
+- [AI, the first year uni student helping you write code](https://adam.kostarelas.com/micro/ai-the-first-year/)
 - [Banana Blitz](https://adam.kostarelas.com/micro/banana-blitz/)
 - [The CyberThing Trustmark - a Saturday Arvo project](https://adam.kostarelas.com/blog/cyberthing-trustmark/)
 - [Waves](https://adam.kostarelas.com/micro/waves/)
 - [Mini Music Player](https://adam.kostarelas.com/micro/mini-music-player/)
-- [Lego Mac Mini Case](https://adam.kostarelas.com/micro/lego-mac-case/)
 <!-- BLOG-POST-LIST:END -->
 
 <details>
