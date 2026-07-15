@@ -1,6 +1,6 @@
 # Action to generate metrics using LowLighter/Metrics by Simon Lecoq
 
-# All results are in SVG format, and commited to /assets/metrics/ in master branch.
+# All results are in SVG format, and committed to /assets/metrics/ in the main branch.
 # Split into multiple jobs, to prevent everything failing if one component errors,
 # And to improve the loading and layout of /METRICS.md where the SVGs are displayed
 
@@ -16,7 +16,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/sponsors.svg
@@ -37,12 +37,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/contributions.svg
           committer_message: "📊 Updates metrics - contributions"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           template: classic
           base: ""
@@ -56,12 +55,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/tickets.svg
           committer_message: "📊 Updates metrics - tickets"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_followup: yes
@@ -74,11 +72,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/habits.svg
-          committer_message: "📊 Updates metrics - habbits"
+          committer_message: "📊 Updates metrics - habits"
           user: adamxweb
           base: ""
           plugin_habits: yes
@@ -96,12 +94,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/stargazers.svg
           committer_message: "📊 Updates metrics - stargazers"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_stargazers: yes
@@ -113,12 +110,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/activity.svg
           committer_message: "📊 Updates metrics - activity"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_activity: yes
@@ -132,12 +128,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/reactions.svg
           committer_message: "📊 Updates metrics - reactions"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_reactions: yes
@@ -154,11 +149,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           committer_message: "📊 Updates metrics - people"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           filename: assets/metrics/people.svg
           user: adamxweb
           base: ""
@@ -172,7 +166,7 @@ jobs:
   #   permissions:
   #     contents: write
   #   steps:
-  #     - uses: lowlighter/metrics@latest
+  #     - uses: lowlighter/metrics@v3.34
   #       with:
   #         token: ${{ secrets.GITHUB_TOKEN }}
   #         filename: assets/metrics/languages.svg
@@ -193,12 +187,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/achievements.svg
-          committer_message: "📊 Updates metrics - acheivments"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          committer_message: "📊 Updates metrics - achievements"
           user: adamxweb
           base: ""
           plugin_achievements: yes
@@ -211,12 +204,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/notable.svg
           committer_message: "📊 Updates metrics - notable contribs"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_notable: yes
@@ -231,12 +223,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/discussions.svg
           committer_message: "📊 Updates metrics - discussions"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_discussions: yes
@@ -248,12 +239,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/gists.svg
           committer_message: "📊 Updates metrics - gists"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_gists: yes                 
@@ -264,12 +254,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/starlists.svg
           committer_message: "📊 Updates metrics - starlists"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_starlists: yes
@@ -283,12 +272,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/intro.svg
           committer_message: "📊 Updates metrics - intro"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_introduction: yes  
@@ -299,12 +287,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/repositories.svg
           committer_message: "📊 Updates metrics - repositories"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_repositories: yes
@@ -324,12 +311,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/topics.svg
           committer_message: "📊 Updates metrics - topics"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           plugin_topics: yes
@@ -342,11 +328,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           filename: assets/metrics/stackoverflow.svg
           committer_message: "📊 Updates metrics - stackoverflow"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -355,37 +340,16 @@ jobs:
           plugin_stackoverflow_sections: answers-top
           plugin_stackoverflow_limit: 5
 
-  # Twitter Metrics
-  twitter-metrics:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          filename: assets/metrics/twitter.svg
-          committer_message: "📊 Updates metrics - twitter"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          user: adamxweb
-          base: ""
-          token: ${{ secrets.GITHUB_TOKEN }}
-          plugin_tweets: yes
-          plugin_tweets_token: ${{ secrets.TWITTER_TOKEN }}
-          plugin_tweets_attachments: yes
-          plugin_tweets_user: adamxweb
-          plugin_tweets_limit: 5
-
   # RSS Feed
   blog-post-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           filename: assets/metrics/blog-posts.svg
           committer_message: "📊 Updates metrics - blog"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           base: ""
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -399,12 +363,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/all.svg
           committer_message: "📊 Updates metrics - all"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           # Options
           user: adamxweb
           template: classic
@@ -452,12 +415,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics/summary.svg
           committer_message: "📊 Updates metrics - summary"
-          committer_token: ${{ secrets.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           user: adamxweb
           template: classic
           base: activity, community, repositories
