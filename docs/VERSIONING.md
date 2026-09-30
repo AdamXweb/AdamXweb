@@ -36,6 +36,11 @@ The tested reference files are in [`standards/versioning`](../standards/versioni
 
 - `Scripts/buildinfo.sh`: emits build settings from one UTC clock capture.
 - `Scripts/banner.sh`: prints the version and provenance before building.
+- `Scripts/prepare-build-info.py`: captures a scheme identity and prepares derived
+  plists, including ordinary Product → Archive with no wrapper commands.
+- `Scripts/build_identity.rb`: shares one captured stamp across a Fastlane lane.
+- `Scripts/verify-archive.py`: checks Organizer metadata against the app and extensions.
+- `Scripts/archive-app.py`: regenerates, archives, and verifies the configured app.
 - `Sources/BuildInfo.swift`: reads the stamped plist for Settings → About.
 - `Config/Shared.xcconfig`: defaults to merge with the app's own configuration.
 
@@ -82,10 +87,37 @@ With XcodeGen, declare both bundle version fields explicitly in each target's
 finished app and extension plists**, rather than relying on resolved settings.
 Missing repositories must produce empty provenance without failing the build.
 
-Orbari's shared schemes capture a fresh stamp in a build pre-action, then
-`Scripts/prepare-build-info.py` writes derived source plists that Xcode processes
-and signs normally. This makes ⌘R and Archive accurate too. Other apps must wire
-an equivalent capture or use their build wrapper; never display stale provenance.
+For direct Xcode builds and archives, wire the reference preparer as follows:
+
+1. Each shared app scheme has a Build pre-action running
+   `env -u SDKROOT /usr/bin/python3 "$SRCROOT/Scripts/prepare-build-info.py" session`,
+   with build settings supplied by its app target. Adjust the path for nested projects.
+2. Each shipping target has a build phase running the same script with `plist`,
+   before sources/resources. Declare the script, original source plist and
+   `$(PROJECT_TEMP_DIR)/BuildIdentity.plist` as inputs; declare
+   `$(DERIVED_FILE_DIR)/BuildIdentity-Info.plist` as output. Run it every build.
+3. Set `INFOPLIST_FILE` to that derived plist and `GENERATE_INFOPLIST_FILE = NO`.
+   Set `BUILD_IDENTITY_SOURCE_PLIST` to the original plist, if any. Keep the
+   original plist out of copied resources: changing the processed plist's path
+   can otherwise expose a duplicate `Info.plist` resource-copy command.
+
+The scheme captures repository information once outside the sandbox. Each target
+then preserves its native metadata while applying the shared version and stamp.
+Xcode processes and signs the derived plists normally. Archive (`ACTION=install`)
+defaults to the release channel with repository details redacted. No tracked
+source plist or already-signed product is rewritten.
+
+After changing an XcodeGen spec, regenerate the project once using the app's
+normal setup command. Product → Archive then generates a fresh identity directly.
+
+For `just archive`, copy `Config/ArchiveTargets.example.json` to the app's
+`Config/ArchiveTargets.json` and supply its actual project, schemes and destinations.
+Set `spec` to `null` for a project maintained directly in Xcode. Delegate the
+recipe to `python3 Scripts/archive-app.py`. The helper archives and verifies
+without exporting or uploading. Pass `--platform macos` for another configured
+platform, `--unsigned` for metadata/compile validation, or `--plan` to inspect
+commands. Each platform has its own archive filename. Signing uses the project's
+existing configuration and Apple account; `APPLE_TEAM_ID` is an optional override.
 
 ## Release pipeline integration
 
@@ -141,8 +173,15 @@ does not change those scope decisions or claim all repositories have adopted it.
 
 ## Verification
 
-Run `python3 standards/versioning/tests/test_buildinfo.py` in this repository.
+Run `python3 standards/versioning/tests/test_buildinfo.py`,
+`python3 standards/versioning/tests/test_xcode_identity.py`,
+`ruby standards/versioning/tests/test_fastlane_identity.rb`, and
+`python3 standards/versioning/tests/test_archive_command.py` in this repository.
 The regression checks cover UTC/year-boundary identity, clean/tagged and dirty
 repositories, untracked content, missing repositories and release redaction.
 For an app integration, also build each platform, inspect the built plists, and
-confirm all artifacts carry the same version, build number and timestamp.
+confirm all artifacts carry the same version, build number and timestamp. Run an
+unsigned device/macOS archive without passing version settings, then use
+`python3 Scripts/verify-archive.py path/to/App.xcarchive` to verify the actual
+Organizer metadata and bundled extensions. Signing/export still uses the app's
+own team, identities and provisioning configuration.

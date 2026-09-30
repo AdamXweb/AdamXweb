@@ -17,3 +17,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify the shared generator and banner
         run: python3 standards/versioning/tests/test_buildinfo.py
+      - name: Verify Xcode Archive identity
+        run: python3 standards/versioning/tests/test_xcode_identity.py
+      - name: Verify the Fastlane adapter
+        run: ruby standards/versioning/tests/test_fastlane_identity.rb
+      - name: Verify archive commands and bundle checks
+        run: python3 standards/versioning/tests/test_archive_command.py

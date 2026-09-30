@@ -2,11 +2,12 @@
 # Human-readable rendering of Scripts/buildinfo.sh, printed before a build so
 # you know what you are about to test. Usage: Scripts/banner.sh [AppName]
 set -euo pipefail
-cd "$(dirname "$0")/.."
+script_dir="$(cd "$(dirname "$0")" && pwd)"
+cd "$script_dir/.."
 
 # Parse data instead of evaluating repository-controlled branch/tag names.
 # A wrapper can supply the stamp it will also pass to xcodebuild.
-info="${BUILD_INFO:-$(Scripts/buildinfo.sh)}"
+info="${BUILD_INFO:-$("$script_dir/buildinfo.sh")}"
 while IFS='=' read -r key value; do
   case "$key" in
     BUILD_NUMBER|BUILD_SHA|BUILD_BRANCH|BUILD_DIRTY|BUILD_DIRTY_FILES|BUILD_DIFF_ID|BUILD_DESCRIBE|BUILD_TAGGED|BUILD_TIMESTAMP|BUILD_CHANNEL)

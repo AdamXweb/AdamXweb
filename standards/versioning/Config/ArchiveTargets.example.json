@@ -1,0 +1,9 @@
+{
+  "project": "MyApp.xcodeproj",
+  "spec": "project.yml",
+  "defaultPlatform": "ios",
+  "platforms": {
+    "ios": {"scheme": "MyApp", "destination": "generic/platform=iOS"},
+    "macos": {"scheme": "MyApp", "destination": "generic/platform=macOS"}
+  }
+}
