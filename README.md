@@ -14,6 +14,11 @@
 - 🔑 GPG key: [`78021768CFE22200`](https://github.com/adamxweb.gpg)
 
 
+## Portfolio standards
+
+[App versioning and build tracking](docs/VERSIONING.md) ·
+[Reusable build tracking code](standards/versioning/)
+
 ## 📰 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
 - [Extracting the soundtrack from Tetris Beat](https://adam.kostarelas.com/micro/extracting-tetris-beat-soundtrack/)

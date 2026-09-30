@@ -1,0 +1,19 @@
+name: Versioning reference
+
+on:
+  pull_request:
+    paths: ["standards/versioning/**", "docs/VERSIONING.md", ".github/workflows/versioning-reference.yml"]
+  push:
+    branches: [main]
+    paths: ["standards/versioning/**", "docs/VERSIONING.md", ".github/workflows/versioning-reference.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify the shared generator and banner
+        run: python3 standards/versioning/tests/test_buildinfo.py

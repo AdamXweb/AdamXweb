@@ -1,0 +1,15 @@
+// Merge into the app's own Config/Shared.xcconfig. Choose its real version.
+MARKETING_VERSION = 0.1.0
+CURRENT_PROJECT_VERSION = $(BUILD_NUMBER)
+
+// Defaults only. Every build must replace the zero sentinel with a fresh stamp.
+BUILD_NUMBER = 0
+BUILD_SHA =
+BUILD_BRANCH =
+BUILD_DIRTY = NO
+BUILD_DIRTY_FILES = 0
+BUILD_DIFF_ID =
+BUILD_DESCRIBE =
+BUILD_TAGGED = NO
+BUILD_TIMESTAMP =
+BUILD_CHANNEL = xcode
