@@ -5,23 +5,23 @@ The following apps now have committed implementations of the agreed
 without version/build command arguments. Marketing versions remain separate in
 `Config/Shared.xcconfig`, and shipping extensions share the app's identity.
 
-These commits have been validated locally. They are not merged into main.
-New branch publication and draft PR creation are pending approval; the existing
-Orbari and central reference PRs also need their local updates pushed.
+App branches and pull requests are published. Merge status below records the
+rollout on 2026-10-01. The central standard is published from the adamXbot fork
+because that account has no write/merge permission in AdamXweb/AdamXweb.
 
-| App | Platforms verified | Local commit | Review status |
+| App | Platforms verified | Pull request | Status |
 | --- | --- | --- | --- |
-| OrgOrbari | ios, macos | `dc3312e9` | Local commit; publication pending approval |
-| RelicPack | ios, macos | `cdd12b8c` | Local commit; publication pending approval |
-| TrainieTalkie | ios | `a53ff1c9` | Local commit; publication pending approval |
-| Restauranteer | ios | `ed58ee5a` | Local commit; publication pending approval |
-| BananaBlitz | macos | `e3235713` | Local commit; publication pending approval |
-| Lyrebird | macos | `4f9dc659` | Local commit; publication pending approval |
-| FrameSplash | macos | `bb5b493e` | Local commit; publication pending approval |
-| Icing | tvos | `3126cb3f` | Local commit; publication pending approval |
-| PrivacyTracker | ios | `c42f5edf` | Local commit; publication pending approval |
-| privacycommand | macos | `c014c57f` | Local commit; publication pending approval |
-| Orbari | macos, ios | `646c1d58` | Update existing [PR #54](https://github.com/AdamXweb/Orbari/pull/54) |
+| OrgOrbari | ios, macos | [PR #15](https://github.com/adamXbot/orgorbari/pull/15) | Merged |
+| RelicPack | ios, macos | [PR #78](https://github.com/adamXbot/voyari/pull/78) | Merged |
+| TrainieTalkie | ios | [PR #192](https://github.com/AdamXweb/TrainieTalkie/pull/192) | Published; final validation/merge in progress |
+| Restauranteer | ios | [PR #27](https://github.com/adamXbot/restauranteer-ios/pull/27) | Merged |
+| BananaBlitz | macos | [PR #11](https://github.com/adamXbot/BananaBlitz/pull/11) | Merged |
+| Lyrebird | macos | [PR #13](https://github.com/adamXbot/lyrebird/pull/13) | Merged |
+| FrameSplash | macos | [PR #8](https://github.com/adamXbot/FrameSplash/pull/8) | Merged |
+| Icing | tvos | [PR #8](https://github.com/adamXbot/Icing/pull/8) | Merged |
+| PrivacyTracker | ios | [PR #2](https://github.com/privacykey/privacytracker-ios/pull/2) | Merged |
+| privacycommand | macos | [PR #21](https://github.com/privacykey/privacycommand/pull/21) | Published; final validation/merge in progress |
+| Orbari | macos, ios | [PR #54](https://github.com/AdamXweb/Orbari/pull/54) | Published; final validation/merge in progress |
 
 ## Verification
 
