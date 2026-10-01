@@ -17,6 +17,7 @@
 ## Portfolio standards
 
 [App versioning and build tracking](docs/VERSIONING.md) ·
+[Apple signing team](docs/SIGNING.md) ·
 [Reusable build tracking code](standards/versioning/)
 
 ## 📰 Latest Blog Posts
