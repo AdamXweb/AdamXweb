@@ -38,16 +38,3 @@
 **Design** | ![Adobe](https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26?style=flat&logo=Adobe%20Creative%20Cloud&logoColor=white) ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white)
 **Env** | [![MacOS](https://img.shields.io/badge/Mac%20OS-000000?style=flat&logo=apple&logoColor=white)](https://apple.com/macos) [![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat&logo=debian&logoColor=white)](https://www.debian.org/)
 </details>
-
-<!-- Metrics -->
-<details>
-  <summary><b>📊 Metrics</b></summary>
-    <p>
-
-| [![General Stats](https://raw.githubusercontent.com/adamxweb/adamxweb/main/assets/metrics/summary.svg)](https://github.com/adamxweb/adamxweb/blob/main/METRICS.md) | [![Stargazer Stats](https://raw.githubusercontent.com/adamxweb/adamxweb/main/assets/metrics/stargazers.svg)](https://github.com/adamxweb/adamxweb/blob/main/METRICS.md) |
-| - | - |
-
-**[➡️ More Metrics](/METRICS.md)**
-
-</p>
-</details>
