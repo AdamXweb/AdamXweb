@@ -37,6 +37,14 @@ with tempfile.TemporaryDirectory() as directory:
         assert actual["BuildTimestamp"] == values["BUILD_TIMESTAMP"]
         assert actual["BuildChannel"] == "release" and actual["BuildSHA"] == ""
         assert actual["CFBundleExecutable"] == "Fixture" and "UILaunchScreen" in actual
+    # CI is automatic for ordinary Xcode builds; Archive and explicit choices win.
+    for action, requested, expected in [("build", "xcode", "ci"), ("install", "xcode", "release"),
+                                         ("build", "local", "local"), ("install", "testflight", "testflight")]:
+        probe = dict(env, ACTION=action, BUILD_CHANNEL=requested, CI="true")
+        subprocess.run(["python3", str(script), "session"], env=probe, check=True)
+        captured = plistlib.loads((root / "project/BuildIdentity.plist").read_bytes())
+        assert captured["BUILD_CHANNEL"] == expected, (action, requested, captured)
+    subprocess.run(["python3", str(script), "session"], env=env, check=True)
     # A complete wrapper stamp wins even when a second platform captures later.
     env.update(BUILD_NUMBER="2026.0930.0000", CURRENT_PROJECT_VERSION="2026.0930.0000",
                BUILD_TIMESTAMP="2026-09-30T00:00:00Z", BUILD_CHANNEL="testflight",

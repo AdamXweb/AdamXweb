@@ -51,13 +51,28 @@ with tempfile.TemporaryDirectory() as temporary:
 
     run(["git", "-c", "tag.gpgsign=false", "tag", "-a", "snapshot", "-m", "Snapshot"], repo, env)
     assert stamp()["BUILD_TAGGED"] == "NO", "Only a version tag marks a release"
+    run(["git", "-c", "tag.gpgsign=false", "tag", "v1-preview"], repo, env)
+    assert stamp()["BUILD_TAGGED"] == "NO", "A v-prefixed snapshot is not a release tag"
     run(["git", "-c", "tag.gpgsign=false", "tag", "-a", "v0.1.0", "-m", "Release"], repo, env)
     assert stamp()["BUILD_TAGGED"] == "YES"
+    shallow = base / "shallow"
+    run(["git", "clone", "-q", "--depth=1", "--no-tags", repo.as_uri(), str(shallow)], base, env)
+    assert stamp(shallow)["BUILD_TAGGED"] == "NO", "Missing tag refs cannot be inferred from CI ref names"
+    run(["git", "fetch", "-q", "--tags"], shallow, env)
+    assert stamp(shallow)["BUILD_TAGGED"] == "YES"
+    run(["git", "checkout", "-q", "--detach"], shallow, env)
+    detached = stamp(shallow)
+    assert detached["BUILD_BRANCH"] == "HEAD" and detached["BUILD_TAGGED"] == "YES"
+    assert stamp(BUILD_CHANNEL="", CI="true")["BUILD_CHANNEL"] == "ci"
+    assert stamp(BUILD_CHANNEL="xcode", GITHUB_ACTIONS="true")["BUILD_CHANNEL"] == "ci"
+    assert stamp(BUILD_CHANNEL="local", CI="true")["BUILD_CHANNEL"] == "local"
+    assert stamp(BUILD_CHANNEL="release", GITHUB_ACTIONS="true")["BUILD_CHANNEL"] == "release"
 
     untracked = repo / "new note.txt"
     untracked.write_text("first draft")
     dirty = stamp()
     assert dirty["BUILD_DIRTY"] == "YES" and dirty["BUILD_DIRTY_FILES"] == "1"
+    assert dirty["BUILD_TAGGED"] == "YES", "Dirty files do not erase a tag at the base commit"
     assert dirty["BUILD_DIFF_ID"] and dirty["BUILD_DIFF_ID"] != "e3b0c442"
     untracked.write_text("second draft")
     assert stamp()["BUILD_DIFF_ID"] != dirty["BUILD_DIFF_ID"]

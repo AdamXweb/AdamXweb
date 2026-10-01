@@ -135,8 +135,8 @@ A nonempty explicit override is optional. Do not retain the old epoch constant
 in a second generator. Export with `manageAppVersionAndBuildNumber: false` so
 Apple's export step preserves the chosen identity.
 
-Release paths check that the pushed tag matches the marketing version before
-loading signing material, reject dirty archives unless explicitly overridden,
+Distribution entry points should check that the pushed tag matches the marketing version before
+loading signing material, reject dirty distribution builds unless explicitly overridden,
 and reject uploads from an untagged commit unless explicitly forced. Warn when
 archiving away from `main`. Local builds remain easy to run on dirty branches.
 
@@ -185,3 +185,20 @@ unsigned device/macOS archive without passing version settings, then use
 `python3 Scripts/verify-archive.py path/to/App.xcarchive` to verify the actual
 Organizer metadata and bundled extensions. Signing/export still uses the app's
 own team, identities and provisioning configuration.
+
+## Command and workflow audit (2026-10-01)
+
+All eleven apps expose `just info` and `just archive`; other commands vary by
+app. See [the complete inventory](BUILD-COMMANDS.md) for exact recipe parameters
+and the difference between fixture-only CI, app build CI and distribution.
+
+The generator automatically selects `ci` on GitHub/CI builds, preserving explicit
+channel overrides. A version tag at HEAD means `vX.Y` or `vX.Y.Z`; dirty files
+and tag presence remain independent. Fetch tag refs before capturing identity.
+The scheme logs the actual target stamp and flags, while shared pipeline job
+summaries report the source at checkout without capturing a second build number.
+
+The distribution safeguards above are the recommended contract, not a claim
+that every current uploader enforces them. Local Archive intentionally supports
+dirty and untagged work. The inventory records each existing release gate;
+several beta/local distribution paths still lack universal clean/tagged guards.

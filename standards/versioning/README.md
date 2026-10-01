@@ -25,3 +25,10 @@ python3 standards/versioning/tests/test_xcode_identity.py
 ruby standards/versioning/tests/test_fastlane_identity.rb
 python3 standards/versioning/tests/test_archive_command.py
 ```
+
+`buildinfo.sh` detects the CI channel automatically unless explicitly overridden,
+recognizes numeric marketing-version tags at HEAD, and preserves dirty/tagged as
+independent flags. GitHub diagnostics identify the source before release fields
+are redacted. `prepare-build-info.py` logs each target's actual UTC stamp and flags.
+The regression suite includes missing/fetched tags, detached HEAD and CI overrides.
+For app command coverage and release gates, see [BUILD-COMMANDS.md](../../docs/BUILD-COMMANDS.md).

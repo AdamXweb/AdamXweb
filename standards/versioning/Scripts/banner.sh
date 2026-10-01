@@ -34,8 +34,11 @@ if [ -t 1 ]; then bold=$'\033[1m'; dim=$'\033[2m'; amber=$'\033[33m'; off=$'\033
 else bold=""; dim=""; amber=""; off=""; fi
 
 printf '%s▸ %s %s (%s)%s\n' "$bold" "$name" "$version" "$BUILD_NUMBER" "$off"
+printf '  channel %s   version tag at HEAD %s\n' "$BUILD_CHANNEL" "$BUILD_TAGGED"
 if [ -n "$BUILD_SHA" ]; then
   printf '  commit  %s   branch  %s\n' "$BUILD_SHA" "$BUILD_BRANCH"
+elif [ "$BUILD_CHANNEL" = release ] || [ "${BUILD_PROVENANCE:-}" = minimal ]; then
+  printf '  commit  %s(redacted)%s\n' "$dim" "$off"
 else
   printf '  commit  %s(none recorded — no repository)%s\n' "$dim" "$off"
 fi

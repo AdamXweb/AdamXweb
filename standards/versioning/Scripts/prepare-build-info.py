@@ -25,7 +25,11 @@ def channel():
     requested = os.environ.get("BUILD_CHANNEL", "")
     if requested and requested != "xcode":
         return requested
-    return "release" if os.environ.get("ACTION") == "install" else "local"
+    if os.environ.get("ACTION") == "install":
+        return "release"
+    if os.environ.get("GITHUB_ACTIONS") == "true" or os.environ.get("CI", "").lower() in ("true", "1", "yes"):
+        return "ci"
+    return "local"
 
 
 def main():
@@ -37,6 +41,7 @@ def main():
         env = dict(os.environ, BUILD_CHANNEL=channel())
         result = subprocess.run(["bash", str(Path(__file__).with_name("buildinfo.sh"))],
                                 cwd=root, env=env, check=True, capture_output=True, text=True)
+        sys.stderr.write(result.stderr)
         values = dict(line.split("=", 1) for line in result.stdout.splitlines())
         session.parent.mkdir(parents=True, exist_ok=True)
         session.write_bytes(plistlib.dumps(values))
@@ -97,6 +102,9 @@ def main():
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_bytes(plistlib.dumps(info))
     print(f"{os.environ.get('PRODUCT_NAME', 'App')} {version} ({build})")
+    print(f"Build provenance: channel={values['BUILD_CHANNEL']} dirty={values['BUILD_DIRTY']} "
+          f"files={values['BUILD_DIRTY_FILES']} version-tag-at-HEAD={values['BUILD_TAGGED']} "
+          f"timestamp={values['BUILD_TIMESTAMP']}")
 
 
 if __name__ == "__main__":

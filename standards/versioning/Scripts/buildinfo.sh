@@ -9,7 +9,15 @@
 #                   binary carries nothing about a private repo.
 set -euo pipefail
 
-channel="${BUILD_CHANNEL:-local}"
+# Xcode's shared xcconfig uses `xcode` as an automatic-channel sentinel.
+# Explicit local/testflight/release choices still win over the CI environment.
+channel="${BUILD_CHANNEL:-xcode}"
+if [ "$channel" = xcode ]; then
+  case "${GITHUB_ACTIONS:-false}:${CI:-false}" in
+    true:*|*:true|*:1|*:yes) channel=ci ;;
+    *) channel=local ;;
+  esac
+fi
 provenance="${BUILD_PROVENANCE:-$([ "$channel" = release ] && echo minimal || echo full)}"
 
 # Absent or unreadable repository (source export, artefact-only CI job) must
@@ -22,7 +30,9 @@ if git rev-parse --git-dir >/dev/null 2>&1 && git rev-parse HEAD >/dev/null 2>&1
   branch=$(git rev-parse --abbrev-ref HEAD)
   n=$(git status --porcelain | wc -l | tr -d ' ')
   describe=$(git describe --tags --always --dirty 2>/dev/null || echo "")
-  if git describe --tags --exact-match --match 'v[0-9]*' HEAD >/dev/null 2>&1; then tagged=YES; fi
+  # A snapshot such as v1-preview is not a marketing-version release tag.
+  # Keep tag-at-HEAD independent of dirty state and the chosen build channel.
+  if git tag --points-at HEAD | LC_ALL=C grep -Eq '^v[0-9]+(\.[0-9]+){1,2}$'; then tagged=YES; fi
   # Hash tracked changes AND untracked content — `git diff HEAD` alone ignores
   # untracked files, so a tree dirty only with new files would otherwise get
   # the constant SHA-256 of empty input (e3b0c442) on every build.
@@ -32,6 +42,13 @@ if git rev-parse --git-dir >/dev/null 2>&1 && git rev-parse HEAD >/dev/null 2>&1
                   | xargs -0 shasum -a 256 2>/dev/null || true;
               } | shasum -a 256 | cut -c1-8 )
   fi
+fi
+
+# CI logs identify the actual checkout even when release binaries redact it.
+# No second clock capture or build number is generated for this diagnostic.
+if [ "${GITHUB_ACTIONS:-false}" = true ]; then
+  printf 'Source provenance: commit=%s branch=%s dirty=%s files=%s version-tag-at-HEAD=%s channel=%s\n' \
+    "${sha:-unknown}" "${branch:-unknown}" "$([ "$n" -gt 0 ] && echo YES || echo NO)" "$n" "$tagged" "$channel" >&2
 fi
 
 # `release` builds ship no repository detail. Keys stay present but empty so
