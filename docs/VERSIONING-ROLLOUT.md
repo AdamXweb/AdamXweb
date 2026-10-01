@@ -65,3 +65,24 @@ The shared implementation and integration instructions are in
 The macOS menu bar/IAP work remains in
 [Orbari PR #54](https://github.com/AdamXweb/Orbari/pull/54).
 Live sandbox IAP and distribution signing were not validated by this Archive rollout.
+
+## Publication of the provenance audit
+
+All eleven app corrections are merged; the shared pipeline fix is merged separately.
+
+- OrgOrbari: https://github.com/adamXbot/orgorbari/pull/16 (`69d6bfe4`).
+- RelicPack: https://github.com/adamXbot/voyari/pull/79 (`77614e3e`).
+- TrainieTalkie: https://github.com/AdamXweb/TrainieTalkie/pull/193 (`333c8532`).
+- Restauranteer: https://github.com/adamXbot/restauranteer-ios/pull/28 (`267ff2fe`).
+- BananaBlitz: https://github.com/adamXbot/BananaBlitz/pull/12 (`4c6a4e74`).
+- Lyrebird: https://github.com/adamXbot/lyrebird/pull/14 (`7bad9fb8`).
+- FrameSplash: https://github.com/adamXbot/FrameSplash/pull/9 (`23895dec`).
+- Icing: https://github.com/adamXbot/Icing/pull/9 (`1c102fae`).
+- PrivacyTracker: https://github.com/privacykey/privacytracker-ios/pull/3 (`f64d4eb9`).
+- privacycommand: https://github.com/privacykey/privacycommand/pull/22 (`67ccdecd`).
+- Orbari: https://github.com/AdamXweb/Orbari/pull/55 (`2db1bb1d`).
+- Shared Apple pipelines: https://github.com/privacykey/gh-workflows/pull/17 (`57d245db`).
+
+All app provenance CI checks pass. Some optional app/fleet checks were still queued or running at merge. TrainieTalkie UI smoke still fails before compilation in the unchanged iPhone 17 Pro/iOS 27.1 simulator provisioner (CoreSimulator 403, exit 147), matching unchanged main on 2026-09-25. No required checks were bypassed.
+
+The central reference remains in https://github.com/AdamXweb/AdamXweb/pull/1, which needs the repository owner to merge.
